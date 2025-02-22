@@ -12,20 +12,21 @@
     <div class="container">
         <h1>Resume Match (by London Chamberlain)</h1>
 
-        <label for="resumeInput">Paste Your Resume Text:</label>
+        <label for="resumeInput" class="form-label fs-5">Paste Your Resume Text:</label>
         <textarea id="resumeInput" rows="6" class="form-control"></textarea>
 
-        <label for="jobTitle">Job Title:</label>
+        <label for="jobTitle" class="form-label fs-5">Job Title:</label>
         <input type="text" id="jobTitle" class="form-control">
 
-        <label for="companyName">Company Name:</label>
+        <label for="companyName" class="form-label fs-5">Company Name:</label>
         <input type="text" id="companyName" class="form-control">
 
-        <label for="jobDesc">Job Application Description:</label>
+        <label for="jobDesc" class="form-label fs-5">Job Application Description:</label>
         <textarea id="jobDesc" rows="6" class="form-control"></textarea>
 
         <button class="btn btn-primary" onclick="analyzeResume()">Submit for Recommendations</button>
 
+        <br>
         <h2>Recommendations:</h2>
         <pre id="results"></pre>
     </div>
@@ -40,7 +41,7 @@
             const stopWords = new Set([
                 ...jobTitle.split(/\s+/), 
                 ...companyName.split(/\s+/),
-                "and", "the", "is", "in", "to", "a", "of", "for", "on", "with", "as", "used", "are", "you", "your", "we", "our", "by", "an", "be", "or", "at", "from", "it", "that", "this", "which", "have", "has", "was", "were", "but", "not", "can", "will", "should", "would", "may", "might", "so", "if", "no", "yes", "up", "down", "out", "over", "under", "more", "most", "some", "such", "any", "other", "all", "each", "every", "than", "then", "when", "where", "why", "how", "s", "also"
+                "and", "the", "is", "in", "to", "a", "of", "for", "on", "with", "as", "used", "are", "you", "your", "we", "our", "by", "an", "be", "or", "at", "from", "it", "that", "this", "which", "have", "has", "was", "were", "but", "not", "can", "will", "should", "would", "may", "might", "so", "if", "no", "yes", "up", "down", "out", "over", "under", "more", "most", "some", "such", "any", "other", "all", "each", "every", "than", "then", "when", "where", "why", "how"
             ]);
 
             const jobWords = jobDesc.match(/\b[a-z]+\b/g).filter(word => !stopWords.has(word));
