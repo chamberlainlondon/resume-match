@@ -79,3 +79,21 @@ a:hover {
 .btn:hover {
     background: #3a77e5;
 }
+
+/* Smooth fade-in animation */
+.animated-fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Button interaction */
+.animated-button {
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.animated-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+}
+
