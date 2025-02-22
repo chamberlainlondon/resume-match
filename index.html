@@ -41,7 +41,7 @@
             const stopWords = new Set([
                 ...jobTitle.split(/\s+/), 
                 ...companyName.split(/\s+/),
-                "and", "the", "is", "in", "to", "a", "of", "for", "on", "with", "as", "used", "are", "you", "your", "we", "our", "by", "an", "be", "or", "at", "from", "it", "that", "this", "which", "have", "has", "was", "were", "but", "not", "can", "will", "should", "would", "may", "might", "so", "if", "no", "yes", "up", "down", "out", "over", "under", "more", "most", "some", "such", "any", "other", "all", "each", "every", "than", "then", "when", "where", "why", "how"
+                "and", "the", "is", "in", "to", "a", "of", "for", "on", "with", "as", "used", "are", "you", "your", "we", "our", "by", "an", "be", "or", "at", "from", "it", "that", "this", "which", "have", "has", "was", "were", "but", "not", "can", "will", "should", "would", "may", "might", "so", "if", "no", "yes", "up", "down", "out", "over", "under", "more", "most", "some", "such", "any", "other", "all", "each", "every", "than", "then", "when", "where", "why", "how", "s", "also"
             ]);
 
             const jobWords = jobDesc.match(/\b[a-z]+\b/g).filter(word => !stopWords.has(word));
