@@ -1,0 +1,20 @@
+title: Resume Match
+description: "A tool to optimize your resume based on job applications."
+author: London Chamberlain
+baseurl: "/resume-match" # Change if your repository name is different
+url: "https://chamberlainlondon.github.io" # Change to your GitHub Pages URL
+
+# Enable Jekyll
+theme: minima # Optional, or use a custom CSS file
+
+# Exclude files from Jekyll processing
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+
+# Navigation (if you want dynamic menus)
+navbar_links:
+  About: "/"
+  Tool: "/pages/tool.html"
