@@ -6,9 +6,17 @@ document.addEventListener("DOMContentLoaded", function() {
         footerPath = "../footer/footer.html";
     }
 
+    console.log("Loading footer from:", footerPath); // Debugging log
+
     fetch(footerPath)
-        .then(response => response.text())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.text();
+        })
         .then(data => {
+            console.log("Footer loaded successfully!"); // Debugging log
             document.body.insertAdjacentHTML("beforeend", data);
         })
         .catch(error => console.error("Error loading footer:", error));
