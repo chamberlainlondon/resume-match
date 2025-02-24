@@ -10,28 +10,35 @@
 </head>
 <body>
     <div class="container">
-        <h1>Resume Match</h1>
-        <h5 class="text-center mb-4">A tool made by <a href="https://londonchamberlain.com" target="_blank">London Chamberlain</a></h5>
+        <div class="text-center mb-4">
+            <h1 class="fw-bold">Resume Match</h1>
+            <p class="text-muted">A tool by <a href="https://londonchamberlain.com" target="_blank">London Chamberlain</a></p>
+        </div>
 
-        <label for="resumeInput" class="form-label fs-5">Paste Your Resume Text:</label>
-        <textarea id="resumeInput" rows="6" class="form-control"></textarea>
+        <div class="card p-4 shadow-sm">
+            <label for="resumeInput" class="form-label">Paste Your Resume:</label>
+            <textarea id="resumeInput" rows="5" class="form-control mb-3"></textarea>
 
-        <label for="jobTitle" class="form-label fs-5">Job Title:</label>
-        <input type="text" id="jobTitle" class="form-control">
-
-        <label for="companyName" class="form-label fs-5">Company Name:</label>
-        <input type="text" id="companyName" class="form-control">
-
-        <label for="jobDesc" class="form-label fs-5">Job Application Description:</label>
-        <textarea id="jobDesc" rows="6" class="form-control"></textarea>
-
-        <button class="btn btn-primary" onclick="analyzeResume()">Submit for Recommendations</button>
-
-        <div class="card mt-4">
-            <div class="card-body">
-                <h2>Recommendations:</h2>
-                <pre id="results"></pre>
+            <div class="row g-2">
+                <div class="col-md-6">
+                    <label for="jobTitle" class="form-label">Job Title:</label>
+                    <input type="text" id="jobTitle" class="form-control">
+                </div>
+                <div class="col-md-6">
+                    <label for="companyName" class="form-label">Company Name:</label>
+                    <input type="text" id="companyName" class="form-control">
+                </div>
             </div>
+
+            <label for="jobDesc" class="form-label mt-3">Job Description:</label>
+            <textarea id="jobDesc" rows="5" class="form-control mb-4"></textarea>
+
+            <button class="btn btn-primary w-100" onclick="analyzeResume()">Submit for Recommendations</button>
+        </div>
+
+        <div class="card mt-4 p-3 shadow-sm">
+            <h4 class="fw-bold">Recommendations:</h4>
+            <pre id="results" class="p-2 bg-light rounded"></pre>
         </div>
     </div>
 
