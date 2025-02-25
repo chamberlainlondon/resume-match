@@ -49,12 +49,14 @@
             const companyName = document.getElementById('companyName').value.trim();
             const jobDesc = document.getElementById('jobDesc').value.trim();
             const submitBtn = document.getElementById('submitBtn');
-
-            // Enable button only if all fields are filled
+        
+            // Check if all fields are filled
             if (resume && jobTitle && companyName && jobDesc) {
                 submitBtn.disabled = false;
+                submitBtn.classList.add("enabled");  // Adds hover effect
             } else {
                 submitBtn.disabled = true;
+                submitBtn.classList.remove("enabled"); // Removes hover effect
             }
         }
 
