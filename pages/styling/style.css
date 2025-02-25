@@ -52,6 +52,30 @@ body {
     transform: translateY(-3px);
 }
 
+/* Default disabled button style */
+#submitBtn {
+    background-color: #788288 !important;
+    border: none;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Button when disabled (unclickable) */
+#submitBtn:disabled {
+    background-color: #788288 !important;
+    cursor: not-allowed;
+}
+
+/* Button when enabled (clickable) */
+#submitBtn.enabled {
+    background-color: #788288 !important;
+}
+
+/* Button hover when enabled */
+#submitBtn.enabled:hover {
+    background-color: #6aa2d9 !important;
+}
+
 /* Links */
 a {
     color: #67a3d9;
